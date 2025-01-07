@@ -1,31 +1,36 @@
-Get started
+# Tic Tac Toe App
 
-1.Install dependencies
+A dynamic and feature-rich Tic Tac Toe game supporting customizable grid sizes, human vs AI gameplay, and game history tracking.
 
--npm install
+# Get started
 
-2.Start the app
+1. **Install Dependencies**  
+   Run the following command to install required packages:  
+   ```bash
+   npm install
 
--npm start
+
+2. **Start the app**
+    ```bash
+   npm start
 
 
- 
-Code Summary
-1. Game Component:
+# Code Summary
+1. **Game Component**:
     * Main gameplay logic for Tic Tac Toe.
     * Adjust the Game Board: Dynamically generate the grid based on the selected gridSize
     * Supports human vs human and human vs AI modes.
     * Uses AsyncStorage to save and load game history.
     * AI logic implemented using Minimax with alpha-beta pruning.
     * Allows dynamic grid sizes and keeps track of move history.
-2. History Component:
+2. **History Component**:
     * Displays a list of past game results stored in AsyncStorage.
     * Provides options to clear history or replay specific games.
-3. Replay Component:
+3. **Replay Component**:
     * Allows users to replay a selected game step by step.
     * Dynamically updates the game board with each move from the history.
 
-Observations and Suggestions:
+# Observations and Suggestions:
 1. Reuse of State and AsyncStorage Logic: Some logic, like saving/loading history, appears multiple times (e.g., in Game and History components). Consider creating a utility module for AsyncStorage operations to avoid repetition.
 2. Error Handling:
     * Good error handling for AsyncStorage operations.
