@@ -243,18 +243,18 @@ const makeAIMove = (currentBoard) => {
     setWinner(player);
     const result = player === 'draw' ? "It's a Draw!" : `${player} wins!`;
     Alert.alert("Game Over", result);
-    try {
-      const currentHistory = await AsyncStorage.getItem('gameHistory');
-      const parsedHistory = currentHistory ? JSON.parse(currentHistory) : [];
-      const gameResult = {
-        result,
-        gridSize,
-        moves: moveHistory // บันทึกการเคลื่อนไหวทั้งหมดในเกม
-      };
-      await AsyncStorage.setItem('gameHistory', JSON.stringify([...parsedHistory, gameResult]));
-    } catch (error) {
-      console.error("Failed to save game history", error);
-    }
+    // try {
+    //   const currentHistory = await AsyncStorage.getItem('gameHistory');
+    //   const parsedHistory = currentHistory ? JSON.parse(currentHistory) : [];
+    //   const gameResult = {
+    //     result,
+    //     gridSize,
+    //     moves: moveHistory // บันทึกการเคลื่อนไหวทั้งหมดในเกม
+    //   };
+    //   await AsyncStorage.setItem('gameHistory', JSON.stringify([...parsedHistory, gameResult]));
+    // } catch (error) {
+    //   console.error("Failed to save game history", error);
+    // }
    console.log('สรุปmove history', moveHistory)
     setTimeout(() => {
       resetBoard();
