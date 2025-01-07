@@ -1,4 +1,4 @@
-Here’s a summary of the code you've provided and how it's organized:
+
 Code Summary
 1. Game Component:
     * Main gameplay logic for Tic Tac Toe.
